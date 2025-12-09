@@ -4,7 +4,6 @@
 ## Project Structure
 
 ```bash
-images #A folder where to put the screenshots that you generate.
 Task 3 #A node project to implement a HTTP server for Task 3
 └── app.js # The server code (TODO: complete)
 └── index.html #The Web page
@@ -21,7 +20,7 @@ README.md #This README.
 
 Go to https://wiser-solid-xi.interactions.ics.unisg.ch/.account/login/password/register/ and create a Solid Pod for each group member.
 
-Use a Pod editor, such as Penny (https://penny.vincenttunru.com) to edit your Pod. Your Pod provider is https://wiser-solid-xi.interactions.ics.unisg.ch/.
+Use a Pod editor, such as [`Penny`](https://penny.vincenttunru.com) to edit your Pod. Your Pod provider is https://wiser-solid-xi.interactions.ics.unisg.ch/.
 
 WARNING: If you edit your WebID profile with a file that is not a proper Turtle document, you will lose access to your Pod. You can use a Turtle editor (e.g., https://felixlohmeier.github.io/turtle-web-editor/) to edit your profile and ensure that it satisfies the right Turtle syntax. You MUST NOT remove any information created by the Solid provider (e.g., solid:oidcIssuer) as this information is required for connecting an app to the Solid pod. Keep each working version of the WebId profile. If your profile is no longer valid and you cannot connect to your pod, contact Jérémy (jeremy.lemee@unisg.ch) so that he can reinitialize your working profile. Otherwise, the reinitialization will be done with default values. 
 
@@ -84,7 +83,7 @@ comunica-sparql-link {pod_url} -f query_friends.rq -l debug
 
 # Task 3: A Solid-Based Application (1.5pt)
 
-In this task, you will use the application [`MediaKraken](https://noeldemartin.github.io/media-kraken/) to add movies to your Solid Pod.
+In this task, you will use the application [`MediaKraken`](https://noeldemartin.github.io/media-kraken/) to add movies to your Solid Pod.
 
 First, you need to perform some steps: 
 1) Ensure that there is no movies/ container in your pod. Delete it if there is already one (or containers with movies in the name). This container will be created by MediaKraken.
