@@ -1,0 +1,16 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix solid: <http://www.w3.org/ns/solid/terms#>.
+
+<>
+    a foaf:PersonalProfileDocument;
+    foaf:maker <https://wiser-solid-xi.interactions.ics.unisg.ch/group8_pod2/profile/card#me>;
+    foaf:primaryTopic <https://wiser-solid-xi.interactions.ics.unisg.ch/group8_pod2/profile/card#me>.
+
+<https://wiser-solid-xi.interactions.ics.unisg.ch/group8_pod2/profile/card#me>
+    solid:oidcIssuer <https://wiser-solid-xi.interactions.ics.unisg.ch/>;
+    a foaf:Person;
+    foaf:name "Arthur Van Petegem";
+    foaf:mbox <mailto:arthurvanpetegem@outlook.com>;
+    foaf:currentProject <https://wiser-solid-xi.interactions.ics.unisg.ch/group8_pod2/group-info#this>;
+    foaf:knows <https://wiser-solid-xi.interactions.ics.unisg.ch/Group8_pod/profile/card#me>;
+    foaf:knows <https://wiser-solid-xi.interactions.ics.unisg.ch/jlemee/profile/card#me>.
