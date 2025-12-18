@@ -1,0 +1,5 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?group WHERE {
+    <https://wiser-solid-xi.interactions.ics.unisg.ch/group8_pod2/profile/card#me> foaf:currentProject ?group .
+}
