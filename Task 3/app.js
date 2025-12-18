@@ -58,7 +58,12 @@ app.get('/', (req, res) => {
 async function handle_query(input_url){
     let movie_urls=[]
     try {
-    const bindingsStream = await engine.queryBindings(` `, { //TODO: complete SPARQL query to get the URLs of the pages describing the movies from the container
+    const bindingsStream = await engine.queryBindings(`
+      PREFIX ldp: <http://www.w3.org/ns/ldp#>
+      SELECT ?v WHERE {
+        ?container ldp:contains ?v .
+      }
+    `, { //TODO: complete SPARQL query to get the URLs of the pages describing the movies from the container
     sources: [input_url],
   });
   bindingsStream.on('data', (data) => {
@@ -73,7 +78,13 @@ async function handle_query(input_url){
       console.log('[/movies] no movies found in this container');
     return;
   }
-    engine.queryBindings(``, { //TODO: complete SPARQL query to get the name and the URL for the image a page describing a movie on the pod.
+    engine.queryBindings(`
+      PREFIX schema: <https://schema.org/>
+      SELECT ?name ?image WHERE {
+        ?movie schema:name ?name ;
+               schema:image ?image .
+      }
+    `, { //TODO: complete SPARQL query to get the name and the URL for the image a page describing a movie on the pod.
     sources: movie_urls,
   }).then(function (moviesStream) {
     moviesStream.on('data', function (data) {
@@ -105,7 +116,12 @@ async function handle_query_group(input_url) {
   let movie_containers = [];
   let movie_urls = [];
 
-  engine.queryBindings(``, { //TODO: complete SPARQL query to get the members of a group from a group profile. 
+  engine.queryBindings(`
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    SELECT ?m WHERE {
+      ?group foaf:member ?m .
+    }
+  `, { //TODO: complete SPARQL query to get the members of a group from a group profile.
     sources: [input_url],
   }).then(function (bindingsStream) {
 
@@ -128,7 +144,11 @@ async function handle_query_group(input_url) {
       console.log("group members urls: ", member_urls);
 
 
-      engine.queryBindings(``, { //TODO: complete SPARQL query to get the movie container from a profile. 
+      engine.queryBindings(`
+        SELECT ?movieContainer WHERE {
+          ?person <https://example.org/hasMovieContainer> ?movieContainer .
+        }
+      `, { //TODO: complete SPARQL query to get the movie container from a profile.
         sources: member_urls,
       }).then(function (memberStream) {
 
@@ -150,7 +170,12 @@ async function handle_query_group(input_url) {
           console.log("movie containers: ", movie_containers);
 
 
-          engine.queryBindings(``, { //TODO: complete SPARQL query to get the URLs of the pages describing the movies from the container
+          engine.queryBindings(`
+            PREFIX ldp: <http://www.w3.org/ns/ldp#>
+            SELECT ?v WHERE {
+              ?container ldp:contains ?v .
+            }
+          `, { //TODO: complete SPARQL query to get the URLs of the pages describing the movies from the container
             sources: movie_containers,
           }).then(function (containerStream) {
 
@@ -168,7 +193,13 @@ async function handle_query_group(input_url) {
                 return;
               }
 
-              engine.queryBindings(``, { //TODO: complete SPARQL query to get the name and the URL for the image a page describing a movie on the pod.
+              engine.queryBindings(`
+                PREFIX schema: <https://schema.org/>
+                SELECT ?name ?image WHERE {
+                  ?movie schema:name ?name ;
+                         schema:image ?image .
+                }
+              `, { //TODO: complete SPARQL query to get the name and the URL for the image a page describing a movie on the pod.
                 sources: movie_urls,
               }).then(function (movieStream) {
 
