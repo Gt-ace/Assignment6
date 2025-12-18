@@ -3,7 +3,8 @@ Assignment 6 Solution
 
 # Team Members
 
-...
+Benjamin Hikaru Pfister
+Arthur Van Petegem
 
 # GitHub link to your (forked) repository
 
@@ -13,13 +14,15 @@ Assignment 6 Solution
 
 1. Indicate WebIDs of the group members and the files corresponding to the profiles of the group members.
 
-Ans:
-
+Ans: 
+Arthur WebID: https://wiser-solid-xi.interactions.ics.unisg.ch/group8_pod2/profile/card#me
+Benjamin WebID: https://wiser-solid-xi.interactions.ics.unisg.ch/Group8_pod/profile/card#me
+Files: arthur-profile.ttl and benjamin-profile.ttl
 
 2. Indicate the URL of group profile and the file that contains the group profile.
 
-Ans:
-
+Ans: https://wiser-solid-xi.interactions.ics.unisg.ch/group8_pod2/profile/card#me
+Files: group-info.ttl
 
 
 
@@ -30,9 +33,7 @@ Ans:
 
 2. Query the names of all the people in your distributed social graph (i.e., people you know directly or indirectly) using your profile as an entry point. To do this, you will need to write a navigational query (see lecture slides) and use link traversal (using the command comunica-sparql-link-traversal). Try running the query without link traversal as well and see what happens. Provide the query in the [`query_friends.rq`](query_friends.rq) file (see project README) and explain the results.
 
-Ans:
-
-
+Ans: With link traversal comunica automatically follows the links from a profile to other profiles across the web. Without link traversal the query returns no results, with link traversal we found 7 people. This is because the query uses the (foaf:knows)+ property to find all relationships to find direct friends and friends of friends.
 
 
 # Task 4
