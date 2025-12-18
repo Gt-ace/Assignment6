@@ -40,14 +40,24 @@ Ans: With link traversal comunica automatically follows the links from a profile
 
 1. Which rules of Linked Data are applied to create the distributed knowledge graphs used in this assignment? Provide one concrete example for each rule you identify.
 
-Ans:
+Ans: The assignment follows Tim Berners-Lee’s four Linked Data principles:
+
+     URIs as names: Every entity is identified by a unique URI, such as our WebID (https://.../profile/card#me).
+
+     HTTP access: These URIs are accessible via the HTTP protocol, allowing browsers and tools like Comunica to look them up.
+
+     Standardized data: When looked up, the URIs return useful data in standard formats like RDF/Turtle.
+
+     Links to others: The data includes links to other URIs, such as foaf:knows pointing to team members, which connects the isolated data into a distributed graph.
 
 2. One of your colleagues states that a Solid pod in itself is represented as a knowledge graph. Do you agree with this statement? Explain briefly
 
-Ans:
+Ans: Yes, I agree. A Solid Pod stores data using RDF triples (Subject-Predicate-Object), which inherently describe      
+     relationships between entities. Since the data is structured as a network of connected nodes, linking internal resources (like a movie container) and external ones (like friends' profiles), the Pod effectively functions as a personal knowledge graph.
 
 3. One core idea behind Solid is to decouple applications from data. Explain in your own words what this means and what technical and societal implications you see.
 
-Ans: 
+Ans: Decoupling means that data resides in the user's personal Pod, while applications act merely as interchangeable tools that 
+     request access to read or modify that data. Technically, this allows different apps to operate on the same data without needing complex integrations, promoting true interoperability. Societally, this restores data sovereignty: users own their digital identity and can switch service providers at any time without losing their history or data (preventing vendor lock-in).
 
 
