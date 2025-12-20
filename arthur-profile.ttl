@@ -13,4 +13,5 @@
     foaf:mbox <mailto:arthurvanpetegem@outlook.com>;
     foaf:currentProject <https://wiser-solid-xi.interactions.ics.unisg.ch/group8_pod2/group-info#this>;
     foaf:knows <https://wiser-solid-xi.interactions.ics.unisg.ch/Group8_pod/profile/card#me>;
-    foaf:knows <https://wiser-solid-xi.interactions.ics.unisg.ch/jlemee/profile/card#me>.
+    foaf:knows <https://wiser-solid-xi.interactions.ics.unisg.ch/jlemee/profile/card#me>;
+    foaf:knows <https://wiser-solit-xi.interactions.ics.unisg.ch/leogutt/profile/card#me>.
