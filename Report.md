@@ -53,11 +53,11 @@ Ans: The assignment follows Tim Berners-Lee’s four Linked Data principles:
 2. One of your colleagues states that a Solid pod in itself is represented as a knowledge graph. Do you agree with this statement? Explain briefly
 
 Ans: Yes, I agree. A Solid Pod stores data using RDF triples (Subject-Predicate-Object), which inherently describe      
-     relationships between entities. Since the data is structured as a network of connected nodes, linking internal resources (like a movie container) and external ones (like friends' profiles), the Pod effectively functions as a personal knowledge graph.
+     relationships between entities. Since the data is structured as a network of connected nodes, linking internal resources (like a movie container) and external ones (like friends profiles), the Pod really does function as a personal knowledge graph.
 
 3. One core idea behind Solid is to decouple applications from data. Explain in your own words what this means and what technical and societal implications you see.
 
-Ans: Decoupling means that data resides in the user's personal Pod, while applications act merely as interchangeable tools that 
-     request access to read or modify that data. Technically, this allows different apps to operate on the same data without needing complex integrations, promoting true interoperability. Societally, this restores data sovereignty: users own their digital identity and can switch service providers at any time without losing their history or data (preventing vendor lock-in).
+Ans: Decoupling means that data resides in the user's personal Pod, while applications act just as interchangeable tools that 
+     request access to read or modify that data. Technically, this allows different apps to operate on the same data without needing complex integrations, promoting interoperability. Societally, this restores data sovereignty: users own their digital identity and can switch service providers at any time without losing their history or data (preventing vendor lock-in).
 
 
